@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="echarts.min.js"></script>
+    <script src="mqttws31.js"></script>
+</header>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="attitude"></div>
+    <div id="velocity" style="width: 400px;height:300px;"></div>
+    <div id="channels" style="width: 820px;height:350px;"></div>
+    <div id="battery" style="width: 400px;height:350px;"></div>
+   
+   
+    <div id="EKF">EKF : False</div>
+	<div id="Mode">Mode : NONE</div>
+    <div id="Status">System Status : NONE</div>
+    
+    <div id="decision"><h>Decision</h></div>
+	
+	<script src="three.min.js"></script>
+
+	<script src="js/loaders/ctm/lzma.js"></script>
+	<script src="js/loaders/ctm/ctm.js"></script>
+	<script src="js/loaders/ctm/CTMLoader.js"></script>
+
+	<script src="js/Detector.js"></script>
+	<script src="js/libs/stats.min.js"></script>
+
+    <script type="text/javascript" src="all.js"></script>
+
+    <style>
+    body{
+        background-color: #fff;
+    }
+    #attitude {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+    #velocity{
+		position: relative;
+		top: 0px;
+		left: 430px;
+	}
+    #channels{
+    	position: relative;
+    	top: -10px;
+    	left: 0px;
+    }
+    #battery{
+    	position: absolute;
+    	top: 0px;
+    	left: 420px;
+    }
+    #EKF {
+    	position: absolute;
+    	left: 20px;
+    	top: 230px;
+    	font-size: 17px;
+    }
+    #Mode {
+    	position: absolute;
+    	left: 20px;
+    	top: 250px;
+    	font-size: 17px;
+    }
+    #Status {
+        position: absolute;
+        left: 20px;
+        top: 270px;
+        font-size: 17px;
+    }
+    #decision {
+        position: absolute;
+        top: 630px;
+        left: 50px;
+        height: 200px;
+        width: 400px;
+        overflow: scroll;
+    }
+
+    </style>
+</body>
+
+</html>
